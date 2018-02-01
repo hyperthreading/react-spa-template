@@ -59,6 +59,7 @@ development version에서는 이름이
 Plain Javascript(ES6든 뭐든)이라면 확장자를 js로
 JSX Syntax를 사용하면 확장자를 jsx로 할 것
 
+```
 src/
     index.js **mount react component**
     store.js - **redux store**
@@ -78,7 +79,7 @@ src/
         SimpleComp.jsx
     apis/ - **ajax call로 state를 바꾸는 것들 모음 (redux-thunk)**
     constants/ - **상수 (api endpoint등)**
-        
+```        
 
 ## Code Style
 [Airbnb Style Guide](https://github.com/airbnb/javascript#the-javascript-style-guide-guide)를 참고해주세요!! (한국어도 있어용)
