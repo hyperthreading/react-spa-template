@@ -6,17 +6,17 @@ React + Redux + Redux Thunk + Immutable.js + CSS Modules를 사용하는 프로�
 각 라이브러리의 rationale 정도는 읽어보시면 좋습니다.
 
 ### redux
-[](https://redux.js.org/)
+[https://redux.js.org/](https://redux.js.org/)
 app state management, debugging 단순화를 위한 라이브러리입니다
 **redux-devtool**을 사용하면 action을 감시하고 time machine 기능을 사용할 수 있습니다.
 
 ### redux-thunk
-[](https://github.com/gaearon/redux-thunk)
+[https://github.com/gaearon/redux-thunk](https://github.com/gaearon/redux-thunk)
 액션이 함수를 리턴할 수 있습니다. 해당 함수는 dispatch되면 실행됩니다.
 API콜과 같이 좀 더 복잡한 action을 쉽게 만들게 해줍니다.
 
 ### immutable.js
-[](https://facebook.github.io/immutable-js/)
+[https://facebook.github.io/immutable-js/](https://facebook.github.io/immutable-js/)
 persistent data structure support for javascript by facebook
 불변성을 잘 지키도록 도와주는 data structure 확장입니다.
 shouldComponentUpdate를 통한 퍼포먼스 최적화와 reducer에 사용합니다.
@@ -24,7 +24,7 @@ Immutable Object, Array 등을 변경하면 레퍼런스가 다른 새로운 오
 기존 오브젝트는 값이 변하지 않습니다.
 
 ### classnames
-[](https://github.com/JedWatson/classnames)
+[https://github.com/JedWatson/classnames](https://github.com/JedWatson/classnames)
 classname들을 쉽게 조합해주는 가벼운 라이브러리입니다.
 
 ```javascript
