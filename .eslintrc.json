@@ -11,8 +11,6 @@
     "browser": true
   },
   "rules": {
-    "semi": 2,
-    "react/prefer-stateless-function": [2, { "ignorePureComponents": true }]
-  },
-  "extends": "airbnb"
+    "semi": 2
+  }
 }
