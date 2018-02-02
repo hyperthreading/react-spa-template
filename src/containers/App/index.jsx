@@ -1,27 +1,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import cn from 'classnames';
 
+import InsightReader from '../InsightReader';
 import { setCourseId } from '../../actions';
 
-import logo from './logo.svg';
 import styles from './index.css';
+
+const courseMainCn = styles.courseMainPane;
+
+const LeftPane = ({ courseId }) => (
+  <div className={cn(courseMainCn, styles.courseMainLeftPane)}>
+    add here course title id: {courseId}<br />
+  <InsightReader/>
+  </div>
+);
+
+const RightPane = ({ courseId }) => (
+  <div className={cn(courseMainCn, styles.courseMainRightPane)}>
+    Right pane (Build some component here)
+  </div>
+);
+
+const BottomBarContainer = () => (
+  <div className={styles.bottomBar}>
+    <span>LALALALALAL</span>
+  </div>
+);
 
 class App extends React.PureComponent {
   render() {
     const { courseId } = this.props;
     return (
-      <div className={styles.App}>
-        <header className={styles['App-header']}>
-          <img
-            src={logo}
-            className={styles['App-logo']}
-            alt="logo"
-          />
-          <h1 className={styles['App-title']}>Welcome to React</h1>
-        </header>
-        <p className={styles['App-intro']}>
-          the course id is {courseId}
-        </p>
+      <div>
+        <div className={styles.courseMain}>
+          <LeftPane courseId={courseId} />
+          <RightPane courseId={courseId} />
+        </div>
+        <BottomBarContainer />
       </div>
     );
   }

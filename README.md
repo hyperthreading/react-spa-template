@@ -1,9 +1,17 @@
 # Introduction
 
-+ React-Router
+Core Library로 React + Redux + Immutable.js + CSS Modules를 사용하는 프로젝트 템플릿입니다.
 
-React + Redux + Redux Thunk + Immutable.js + CSS Modules를 사용하는 프로젝트 템플릿입니다.
-Create React App을 eject해 만들었습니다. (locally installed eslint@4와 충돌하기 때문에 주의해주세요. 후에 변경할 수 있음. 아마 webpack + babel + serve 사용할듯)
+그 외 react-redux, redux-thunk, react-router, react-router-redux 등을 사용합니다.
+
+Create React App을 eject해 만들었습니다. 
+
+## Warning
+
+1. locally installed eslint@4와 충돌하기 때문에 주의해주세요. 나중에 직접 boilerplate 만들어 해결할 것. 
+   (현재 @3버전 사용)	
+
+
 
 ## Index
 설치/실행/빌드는 **Development Cycle**
@@ -21,12 +29,14 @@ Tested on **Node v8.9.4**, macOS High Sierra
 `cd zeta`
 `npm i`
 
-## Development/
+## Development
 Development mode에서는 optimization이 적고 Redux Devtool을 사용할 수 있으며 코드를 수정하면 페이지가 업데이트 되며 CSS Modules의 className이 읽기 쉬운 형태로 되어 있습니다.
 포트 충돌이 없을 경우 localhost:3000으로 접속할 수 있습니다.
 `npm run start`
 
 ## Production
+
+build/ 에 빌드 결과물이 생성됩니다.
 
 `npm run build`
 
@@ -40,6 +50,10 @@ app state management, debugging 단순화를 위한 라이브러리입니다
 ### redux-thunk [https://github.com/gaearon/redux-thunk](https://github.com/gaearon/redux-thunk)
 액션이 함수를 리턴할 수 있습니다. 해당 함수는 dispatch되면 실행됩니다.
 API콜과 같이 좀 더 복잡한 action을 쉽게 만들게 해줍니다.
+
+### react-redux  [API doc link](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options)
+
+리덕스는 리액트와 무관하게 데이터를 관리하는 하나의 패턴이기 때문에, 리액트에서 편리하게 사용하기 위해 해당 라이브러리를 사용합니다. redux container를 만드는 connect 함수와 자식 container들이 store의 정보를 받게 해주는 Provider 컴포넌트를 제공합니다.
 
 ### immutable.js [https://facebook.github.io/immutable-js/](https://facebook.github.io/immutable-js/)
 persistent data structure support for javascript by facebook
@@ -90,12 +104,12 @@ build/ - npm run build에서 빌드 결과물이 저장되는 폴더입니다.
 
 
 ### Source File structures
-Plain Javascript(ES6든 뭐든)이라면 확장자를 js로
+Plain Javascript 이라면 확장자를 js로
 JSX Syntax를 사용하면 확장자를 jsx로 할 것
 
 ```
 src/
-    index.js **mount react component**
+    index.jsx **mount react component**
     configureStore.js - **redux store**
     reducers/ - **redux reducers**
         index.js
@@ -128,9 +142,9 @@ Hoisting, Scope로 인한 에러를 피하기 위함입니다.
 
 ### Indentation: 2 Spaces
 
-### Writing names for variable: use **camelCase**
+### Use **camelCase** for variable names
 
-### Writing names for instances of component: use **PascalCase**
+### Use **PascalCase** for instance names of a component
 
 for instance,
 

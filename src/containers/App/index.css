@@ -1,3 +1,27 @@
+
+.courseMain {
+    display: flex;
+}
+
+.courseMainPane {
+    width: 50vw;
+    height: 100vh;
+}
+
+.courseMainLeftPane {
+}
+
+.courseMainRightPane {
+}
+
+.bottomBar {
+    width: 100%;
+    postion: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .App {
   text-align: center;
 }
