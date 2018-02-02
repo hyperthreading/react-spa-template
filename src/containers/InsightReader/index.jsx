@@ -11,7 +11,7 @@ class InsightReader extends Component {
     );
   }
 }
-
+ 
 function mapStateToProps(state) {
   return {
     insight: state.get("insight"),

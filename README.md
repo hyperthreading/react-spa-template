@@ -29,10 +29,18 @@ Tested on **Node v8.9.4**, macOS High Sierra
 `cd zeta`
 `npm i`
 
-## Development
+## Development & Debugging
+#### Starting web pack hot reload server
+
 Development mode에서는 optimization이 적고 Redux Devtool을 사용할 수 있으며 코드를 수정하면 페이지가 업데이트 되며 CSS Modules의 className이 읽기 쉬운 형태로 되어 있습니다.
 포트 충돌이 없을 경우 localhost:3000으로 접속할 수 있습니다.
 `npm run start`
+
+#### Debugging w/ Chrome Devtools
+
+크롬 확장 중 react devtool과 redux devtool을 깔면 쉽게 디버깅할 수 있습니다.
+
+React Component의 인풋을 볼 수 있으며 Redux의 모든 state 변화를 한눈에 보고 직접 재현할 수 있습니다.
 
 ## Production
 
