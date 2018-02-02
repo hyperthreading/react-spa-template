@@ -14,3 +14,10 @@ export function setCourseTitle(data) {
     data: data
   };
 }
+
+export const REQUEST_INSIGHT_CONTENT = "REQUEST_INSIGHT_CONTENT";
+export function requestInsightContent(courseId) {
+  return {
+    type: REQUEST_INSIGHT_CONTENT
+  };
+}
