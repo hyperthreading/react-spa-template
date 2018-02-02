@@ -96,7 +96,7 @@ JSX Syntax를 사용하면 확장자를 jsx로 할 것
 ```
 src/
     index.js **mount react component**
-    store.js - **redux store**
+    configureStore.js - **redux store**
     reducers/ - **redux reducers**
         index.js
     actions/ - **redux actions**

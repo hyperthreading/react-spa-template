@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import { setCourseId } from '../../actions';
+
 import logo from './logo.svg';
-import styles from './App.css';
+import styles from './index.css';
 
 class App extends React.PureComponent {
   render() {
+    const { courseId } = this.props;
     return (
       <div className={styles.App}>
         <header className={styles['App-header']}>
@@ -15,11 +20,22 @@ class App extends React.PureComponent {
           <h1 className={styles['App-title']}>Welcome to React</h1>
         </header>
         <p className={styles['App-intro']}>
-          To get started, edit <code>src/App.js</code> and save to reload.
+          the course id is {courseId}
         </p>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  courseId: state.get('courseId')
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setCourseId
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
